@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+        <title>{{ name }}</title>
+        <link rel="icon" type="image/jpg" href="/favicon.png">
+
+        <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="/css/semantic.css">
+        <link rel="stylesheet" type="text/css" href="/css/selectize.css">
+        <link rel="stylesheet" type="text/css" href="/components/dropdown.css">
+
+        <style>
+            :root {
+                --border-color: #1E4A88;
+            }
+
+            .selectize-control.plugin-drag_drop.multi > .selectize-input > div.ui-sortable-placeholder {
+                border-left: 1px solid var(--border-color);
+            }
+
+            .selectize-control.multi .selectize-input > div {
+                background: #2185d0;
+                color: #f2f2f2;
+                border: 1px solid var(--border-color);
+            }
+
+            .ui.table td {
+                padding: 1em;
+            }
+
+            .ui.table:not(.unstackable) tr {
+                padding-top: 0;
+                padding-bottom: 0;
+                box-shadow: none !important;
+            }
+        </style>
+
+        <!-- JS -->
+        <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="/js/underscore.js"></script>
+        <script type="text/javascript" src="/components/dropdown.js"></script>
+        <script type="text/javascript" src="/js/semantic.js"></script>
+        <script type="text/javascript" src="/js/selectize.js"></script>
+        <script type="text/javascript" src="/js/instructions.js"></script>
+        <script>
+            function applicationName(){
+                var application = document.getElementById("application");
+                var name = application.value;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+
+            <h1 class="ui center aligned icon header">
+                <i class="legal icon"></i>
+                <div class="content">
+                    {{ name }}
+                </div>
+            </h1>
+
+            <!-- Main content -->
+            <div class="" id="content">
+                {% block content %}{% endblock %}
+            </div>
+
+            <div class="ui header centered">
+                
+            </div>
+
+        </div>
+    </body>
+</html>

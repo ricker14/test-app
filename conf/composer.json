@@ -1,0 +1,23 @@
+{
+	"name": "roconnor/test-app",
+	"description": "Test App for...testing",
+	"config": {
+		"vendor-dir": "../vendor"
+	},
+	"require": {
+		"slim/slim": "^3.0",
+		"twig/twig": "v2.4.3",
+		"illuminate/database": "v5.4.19",
+		"monolog/monolog": "1.22.1"
+	},
+	"autoload": {
+		"classmap": [
+			"../App/Controllers",
+			"../App/Models",
+			"../App/Helpers"]
+	},
+	"scripts": {
+		"post-update-cmd" : [
+		]
+	}
+}
